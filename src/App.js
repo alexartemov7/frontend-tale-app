@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { createContext, useState } from 'react'
+import './App.css'
+import Nav from './components/Nav'
+import Footer from './components/Footer'
+import AllStories from './pages/AllStories'
+
+
+export const UserContext = createContext()
 
 function App() {
+  const [userState, setUserState] = useState({})
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <UserContext.Provider value={{ userState, setUserState }}>
+        <Nav />
+        <Routes>
+          <Route path='/' element={<AllStories />} />
+        </Routes>
+        <Footer />
+      </UserContext.Provider>
+
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
