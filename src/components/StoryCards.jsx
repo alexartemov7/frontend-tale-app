@@ -8,8 +8,7 @@ const StoryCards = ({ genre }) => {
   useEffect(() => {
     const fetchStories = async () => {
       try {
-        // Update the URL to include the full path with the localhost and port
-        const response = await fetch(`http://localhost:8080/stories/genre/Adventure`);
+        const response = await fetch(`${process.env.REACT_APP_API_ENDPOINT}/stories/genre/Sci-Fi`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
