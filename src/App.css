@@ -1,26 +1,47 @@
-*, 
-*::after, 
+*,
+*::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
 
+/* Add a main container style */
+.main-container {
+  max-width: 1200px; /* Or any maximum width you prefer */
+  margin: 0 auto; /* Centers the container */
+  padding: 0 20px; /* Adds some padding on the sides */
+}
+
+
 body {
   box-sizing: border-box;
+  background-color: #fff; 
+  color: #000; 
+  font-family: Arial, sans-serif; 
 }
 
 header {
-  height: 3rem;
-  background-color: #685353;
+  height: 4rem;
+  background-color: #000; 
+  border-bottom: 2px solid #333;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header > ul {
-  height: 2.5rem;
-  overflow: hidden;
   list-style-type: none;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 1rem;
+  background-color: #333; 
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header > ul > li {
@@ -28,11 +49,12 @@ header > ul > li {
 }
 
 header > ul > li:hover {
-  background-color: #111;
+  background-color: #fff; 
+  color: #000; 
 }
 
-header > ul > li > a{
-  color: whitesmoke;
+header > ul > li > a {
+  color: #fff; 
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
@@ -44,9 +66,9 @@ header > ul > li > a{
   max-height: 300px;
   padding: 2rem;
   margin: 2rem;
-  border: 1px solid rgb(70 , 70 , 70);
+  border: 1px solid #333; 
   border-radius: 5px;
-
+  background-color: #f5f5f5; 
 }
 
 .singleCard > img {
@@ -58,12 +80,11 @@ header > ul > li > a{
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
 }
 
 footer {
   width: 100%;
   padding: 2rem;
-  height: 200px;
-  object-fit: cover;
+  background-color: #000; 
+  color: #fff; 
 }

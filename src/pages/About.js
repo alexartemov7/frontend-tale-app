@@ -2,10 +2,10 @@ import Nav from "../components/Nav"
 import Footer from "../components/Footer"
 
 
-export default function Home() {
+export default function About() {
     return (
         <>
-         This is Home
+         This is About the project page
         </>
     )
 }

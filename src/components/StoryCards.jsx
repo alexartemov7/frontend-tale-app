@@ -1,56 +1,79 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './StoryList.css';
 
-const StoryCards = ({ genre }) => {
+const StoryList = () => {
   const [stories, setStories] = useState([]);
+  const [selectedGenre, setSelectedGenre] = useState('all');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate(); // Added useNavigate
 
   useEffect(() => {
     const fetchStories = async () => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_API_ENDPOINT}/stories/genre/Sci-Fi`);
+        let url = 'http://localhost:8080/stories';
+        if (selectedGenre !== 'all') {
+          url += `/genre/${selectedGenre}`;
+        }
+
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
+    
         setStories(data);
-      } catch (error) {
-        setError(error.message);
+      } catch (err) {
+        setError(err.message);
       } finally {
         setLoading(false);
       }
     };
 
     fetchStories();
-  }, [genre]);
+  }, [selectedGenre]);
+
+  const handleStoryClick = (storyId) => {
+    console.log('Story ID:', storyId); // Debug: Check if the ID is valid
+    if (storyId) {
+      navigate(`/chapters/${storyId}`);
+    } else {
+      console.error('Story ID is undefined');
+    }
+  };
+  
+  // Genre buttons
+  const genres = ['Adventure', 'Horror', 'Sci-Fi', 'all']; // Add more genres as needed
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>Loading stories...</div>;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div>Error loading stories: {error}</div>;
   }
 
   return (
     <div>
-      {stories.map((story) => (
-        <div key={story._id}>
-          <h3>{story.title}</h3>
-          <p>{story.description}</p>
-          <div>
-            {story.authors.map((author, index) => (
-              <div key={index}>
-                <img src={author.profilePicture} alt={author.username} style={{ width: '50px', height: '50px' }} />
-                <p>{author.username}</p>
-              </div>
-            ))}
-          </div>
-          {/* Additional story details here */}
-        </div>
+      <h1>Stories</h1>
+      {genres.map((genre) => (
+        <button key={genre} onClick={() => setSelectedGenre(genre)} className='genre-button'>
+          {genre}
+        </button>
       ))}
+
+      {stories.map((story, index) => {
+        console.log(story._id)
+        return (
+          <div key={index} className="story-card" onClick={() => handleStoryClick(story._id)}>
+          <img src={story.illustration} alt={story.title} className="story-img"/>
+          <h2 className="story-title">{story.title}</h2>
+          <p className="story-description">{story.description}</p>
+        </div>
+      )})}
     </div>
   );
 };
 
-export default StoryCards;
+export default StoryList;
