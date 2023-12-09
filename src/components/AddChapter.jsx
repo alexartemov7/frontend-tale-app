@@ -1,8 +1,6 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 
-export default function ChapterSubmit() {
-    const { storyId } = useParams();
+export default function ChapterSubmit({ storyId, onChapterAdded }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -21,6 +19,7 @@ export default function ChapterSubmit() {
     
             if (response.ok) {
                 console.log("Chapter added successfully");
+                onChapterAdded(); // This should trigger a refetch in the parent component
                 
             } else {
                 console.error("Error adding chapter");
