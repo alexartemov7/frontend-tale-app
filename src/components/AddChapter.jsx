@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './FormStyles.css'
 export default function ChapterSubmit({ storyId, onChapterAdded }) {
 
     const handleSubmit = async (e) => {
@@ -44,7 +44,7 @@ export default function ChapterSubmit({ storyId, onChapterAdded }) {
                 <textarea name="content" defaultValue="" rows={4} cols={40} />
             </label>
             <hr />
-            <button type="submit">Save post</button>
+            <button type="submit">Add Chapter</button>
         </form>
     );
 }
