@@ -4,8 +4,8 @@
   import Nav from './components/Nav'
   import Footer from './components/Footer'
   import AllStories from './pages/AllStories'
-  import ChapterDetails from './components/ChapterDetails'
   import ChapterSubmit from './components/AddChapter'
+  import ShowChapters from './pages/ChapterPage'
 
   export const UserContext = createContext()
 
@@ -18,7 +18,7 @@
         <div className="main-container">
           <Routes>
             <Route path='/' element={<AllStories />} />
-            <Route path='/chapters/:storyId' element={<ChapterDetails />} />
+            <Route path='/chapters/:storyId' element={<ShowChapters />} />
             <Route path="/chapters/:storyId" element={<ChapterSubmit />} />
           </Routes>
         </div>

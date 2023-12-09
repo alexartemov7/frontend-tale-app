@@ -2,11 +2,11 @@
 
 /* StoryList.css */
 
-/* Base container for the stories */
+
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /* Align items to the start */
+  justify-content: flex-start; 
   gap: 20px; 
   margin-top: 20px;
   margin-left: auto;  

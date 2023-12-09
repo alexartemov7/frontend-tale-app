@@ -40,7 +40,6 @@ const ChapterDetails = () => {
           <div>{chapter.content}</div>
         </div>
       ))}
-  
     </div>
   );
 };

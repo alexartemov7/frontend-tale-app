@@ -21,6 +21,7 @@ export default function ChapterSubmit() {
     
             if (response.ok) {
                 console.log("Chapter added successfully");
+                
             } else {
                 console.error("Error adding chapter");
             }
