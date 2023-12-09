@@ -1,34 +1,7 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
 
-const ChapterDetails = () => {
-  const [chapters, setChapters] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const { storyId } = useParams(); // Get storyId from URL parameters
-
-  useEffect(() => {
-    const fetchChapters = async () => {
-      try {
-        const response = await fetch(`http://localhost:8080/stories/${storyId}/chapters`);
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        setChapters(data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchChapters();
-  }, [storyId]);
-
-  if (loading) return <div>Loading chapters...</div>;
-  if (error) return <div>Error loading chapters: {error}</div>;
-
+const ChapterDetails = ({ chapters }) => {
+  if (!chapters || chapters.length === 0) return <div>No chapters available.</div>;
 
   return (
     <div>
@@ -45,5 +18,3 @@ const ChapterDetails = () => {
 };
 
 export default ChapterDetails;
-
-
