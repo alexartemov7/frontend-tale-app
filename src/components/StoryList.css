@@ -1,17 +1,11 @@
 /* StoryList.css */
 
-/* StoryList.css */
-
-
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; 
-  gap: 20px; 
+  justify-content: flex-start; /* Aligns items to the start of the container */
+  gap: 20px; /* Space between items */
   margin-top: 20px;
-  margin-left: auto;  
-  margin-right: auto; 
-  max-width: 1200px; 
 }
 
 .story-card {
@@ -21,34 +15,26 @@
   margin: 10px;
   border-radius: 8px;
   transition: all 0.3s ease-in-out;
-  width: 300px; 
-  background-color: #fff; 
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  width: 300px; /* Fixed width for each card */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex: 0 0 auto; /* Prevents the card from growing or shrinking */
 }
 
-
 .story-card:hover {
-  transform: translateY(-5px); /* Slight lift effect on hover */
+  transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-/* .story-img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 10px; 
-} */
-
-/* Title styling */
 .story-title {
   font-size: 1.2em;
   color: #333;
-  margin-bottom: 5px; /* Space below the title */
+  margin-bottom: 5px;
 }
 
 .story-description {
   color: #666;
-  margin-bottom: 10px; /* Space below the description */
+  margin-bottom: 10px;
 }
 
 .genre-button {

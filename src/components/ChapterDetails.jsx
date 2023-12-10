@@ -1,16 +1,17 @@
 import React from 'react';
+import './ChapterDetails.css';
 
 const ChapterDetails = ({ chapters }) => {
   if (!chapters || chapters.length === 0) return <div>No chapters available.</div>;
 
   return (
-    <div>
-      <h1>Chapters</h1>
+    <div className="chapterContainer">
+      <h1 className="containerHeading">Chapters</h1>
       {chapters.map((chapter, index) => (
         <div key={index}>
-          <h2>{chapter.title}</h2>
-          <p>{chapter.description}</p>
-          <div>{chapter.content}</div>
+          <h2 className="chapterTitle">{chapter.title}</h2>
+          <p className="chapterDescription">{chapter.description}</p>
+          <div className="chapterContent">{chapter.content}</div>
         </div>
       ))}
     </div>

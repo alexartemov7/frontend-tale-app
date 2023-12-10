@@ -1,45 +1,53 @@
-/* Form Styling */
+/* Adjusted Form Styling to match ChapterDetails.css */
+
 form {
-    background-color: #f5f5f5; /* Light grey background, similar to .singleCard */
-    padding: 20px; /* Spacing inside the form */
-    border: 1px solid #333; /* Border like .singleCard */
-    border-radius: 5px; /* Rounded corners */
-    max-width: 500px; /* Set a max width */
-    margin: 20px auto; /* Centering the form */
+    background-color: #f8f8f8; 
+    padding: 20px;
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
   }
   
   form label {
-    display: block; /* Each label takes a full row */
-    margin-bottom: 10px; /* Spacing between label and input/textarea */
-    color: #000; /* Font color */
-    font-weight: 500; /* Font weight */
+    display: block;
+    margin-bottom: 10px;
+    color: #333; 
+    font-weight: 500;
+    text-align: center; 
   }
   
   form input[type="text"],
   form textarea {
-    width: 100%; /* Full width */
-    padding: 8px; /* Padding inside input/textarea */
-    margin-top: 5px; /* Spacing between label and input/textarea */
-    border: 1px solid #333; /* Border */
-    border-radius: 3px; /* Slightly rounded corners */
-    box-sizing: border-box; /* Box sizing to include padding and border */
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd; 
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333; 
   }
   
   form textarea {
-    resize: vertical; /* Allowing vertical resize only */
+    resize: vertical;
+    height: 150px; 
   }
   
   form button[type="submit"] {
-    background-color: #000; /* Black background like header */
-    color: #fff; /* White text */
+    background-color: #000; 
+    color: #fff;
     border: none;
-    border-radius: 3px; /* Rounded corners */
-    padding: 10px 15px; /* Padding inside the button */
-    margin-top: 10px; /* Spacing above the button */
-    cursor: pointer; /* Cursor to indicate it's clickable */
+    border-radius: 3px;
+    padding: 12px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 16px; 
+    transition: background-color 0.3s ease-in-out; 
   }
   
   form button[type="submit"]:hover {
-    background-color: #333; /* Darker background on hover */
+    background-color: #333; 
   }
   

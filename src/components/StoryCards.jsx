@@ -63,15 +63,16 @@ const StoryList = () => {
         </button>
       ))}
 
-      {stories.map((story, index) => {
-        console.log(story._id)
-        return (
+      <div className="cardContainer"> {/* Apply the cardContainer class here */}
+        {stories.map((story, index) => (
           <div key={index} className="story-card" onClick={() => handleStoryClick(story._id)}>
-          <img src={story.illustration} alt={story.title} className="story-img"/>
-          <h2 className="story-title">{story.title}</h2>
-          <p className="story-description">{story.description}</p>
-        </div>
-      )})}
+            <img src={story.illustration} alt={story.title} className="story-img"/>
+            <p className="story-description">{story.genre}</p>
+            <h2 className="story-title">{story.title}</h2>
+            <p className="story-description">{story.description}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
