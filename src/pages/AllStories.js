@@ -1,5 +1,3 @@
-import Nav from "../components/Nav"
-import Footer from "../components/Footer"
 import StoryCards from "../components/StoryCards"
 
 

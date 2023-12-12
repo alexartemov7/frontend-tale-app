@@ -1,53 +1,64 @@
-/* Adjusted Form Styling to match ChapterDetails.css */
-
 form {
-    background-color: #f8f8f8; 
+    background-color: #f8f8f8;
     padding: 20px;
-    border: 1px solid #ddd; 
-    border-radius: 8px; 
-    max-width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 800px; 
     margin: 20px auto;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-  }
-  
-  form label {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 16px; 
+}
+
+form label {
     display: block;
     margin-bottom: 10px;
-    color: #333; 
+    color: #333;
     font-weight: 500;
-    text-align: center; 
-  }
-  
-  form input[type="text"],
-  form textarea {
+    text-align: left; 
+}
+
+form input[type="text"] {
     width: 100%;
     padding: 12px;
     margin-top: 5px;
-    border: 1px solid #ddd; 
+    border: 1px solid #ddd;
     border-radius: 3px;
     box-sizing: border-box;
-    font-size: 16px;
-    color: #333; 
-  }
-  
-  form textarea {
-    resize: vertical;
-    height: 150px; 
-  }
-  
-  form button[type="submit"] {
-    background-color: #000; 
+}
+
+.textarea-title, .textarea-description, .textarea-content {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.textarea-title {
+    height: 50px; 
+}
+
+.textarea-description {
+    height: 100px; 
+}
+
+.textarea-content {
+    padding: 12px;
+    border-radius: 3px;
+    height: 300px; 
+}
+
+form button[type="submit"] {
+    background-color: #000;
     color: #fff;
     border: none;
     border-radius: 3px;
     padding: 12px 20px;
     margin-top: 15px;
     cursor: pointer;
-    font-size: 16px; 
-    transition: background-color 0.3s ease-in-out; 
-  }
-  
-  form button[type="submit"]:hover {
-    background-color: #333; 
-  }
-  
+    transition: background-color 0.3s ease-in-out;
+}
+
+form button[type="submit"]:hover {
+    background-color: #333;
+}

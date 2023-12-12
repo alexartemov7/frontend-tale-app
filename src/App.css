@@ -1,3 +1,4 @@
+/* Reset and Box Sizing */
 *,
 *::after,
 *::before {
@@ -6,85 +7,169 @@
   box-sizing: inherit;
 }
 
-/* Add a main container style */
-.main-container {
-  max-width: 1200px; /* Or any maximum width you prefer */
-  margin: 0 auto; /* Centers the container */
-  padding: 0 20px; /* Adds some padding on the sides */
-}
-
-
+/* Body Style */
 body {
   box-sizing: border-box;
-  background-color: #fff; 
-  color: #000; 
-  font-family: Arial, sans-serif; 
+  background-color: #fff;
+  color: #000;
+  font-family: Arial, sans-serif;
 }
 
+/* Header Styles */
 header {
-  height: 4rem;
-  background-color: #000; 
-  border-bottom: 2px solid #333;
+  background-color: #000;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 0 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 0.5rem 1rem;
 }
 
-header > ul {
+/* Navigation List */
+header ul {
   list-style-type: none;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 0 1rem;
-  background-color: #333; 
+  padding: 0;
+  background-color: #040404;
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-header > ul > li {
-  height: 100%;
+/* Navigation Items */
+header li {
+  margin: 0 15px;
 }
 
-header > ul > li:hover {
-  background-color: #fff; 
-  color: #000; 
-}
-
-header > ul > li > a {
-  color: #fff; 
-  font-size: 14px;
+/* Navigation Links */
+header a {
+  color: #060505;
+  font-size: 16px;
   font-weight: 500;
   text-decoration: none;
-  margin: 0 16px;
+  padding: 10px 15px;
 }
 
+/* Hover and Focus Effects for Links */
+
+header a:focus {
+  color: #070606;
+  border-radius: 3px;
+}
+
+/* Image Style in Navigation */
+header img {
+  height: 150px;
+  width: auto;
+}
+
+/* Main Container Style */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center; /* Center the H1 tag and other inline elements */
+}
+
+/* Story Card Container */
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the story cards */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Individual Story Cards */
+.story-card {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex: 0 0 auto;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Story Titles */
+.story-title {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Story Descriptions */
+.story-description {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Story Images */
+.story-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Genre Button */
+.genre-button {
+  padding: 6px 12px;
+  margin-right: 10px;
+  background-color: #383b3e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.genre-button:hover {
+  background-color: #080b0e;
+}
+
+/* Single Card Style */
 .singleCard {
   max-width: 300px;
   max-height: 300px;
   padding: 2rem;
   margin: 2rem;
-  border: 1px solid #333; 
+  border: 1px solid #333;
   border-radius: 5px;
-  background-color: #f5f5f5; 
+  background-color: #f5f5f5;
 }
 
+/* Image Style within Single Card */
 .singleCard > img {
   object-fit: cover;
   height: 200px;
   width: 200px;
 }
 
-.cardContainer {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 footer {
   width: 100%;
-  padding: 2rem;
-  background-color: #000; 
-  color: #fff; 
+  padding: 1rem 0; /* Adjust the padding */
+  background-color: #333; /* Footer background color */
+  color: #fff; /* Text color */
+  text-align: center; /* Center the text */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Shadow for a lifted effect */
+  font-family: Arial, sans-serif; /* Consistent font style */
+  border-top: 1px solid #444; /* Border top for a subtle separation */
+}
+
+footer small {
+  display: block; /* Make the small tag a block element */
+  margin: 0 auto; /* Center align */
+  font-size: 0.8em; /* Adjust font size */
 }

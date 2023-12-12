@@ -6,7 +6,7 @@
   import AllStories from './pages/AllStories'
   import ChapterSubmit from './components/AddChapter'
   import ShowChapters from './pages/ChapterPage'
-
+  import About from './pages/About'
   export const UserContext = createContext()
 
   function App() {
@@ -20,6 +20,7 @@
             <Route path='/' element={<AllStories />} />
             <Route path='/chapters/:storyId' element={<ShowChapters />} />
             <Route path="/chapters/:storyId" element={<ChapterSubmit />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </div>
         <Footer />

@@ -9,7 +9,7 @@ export default function ShowChapters() {
 
     const fetchChapters = async () => {
         try {
-            const response = await fetch(`http://localhost:8080/stories/${storyId}/chapters`);
+            const response = await fetch(`${process.env.REACT_APP_API_ENDPOINT}/stories/${storyId}/chapters`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }

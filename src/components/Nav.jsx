@@ -1,18 +1,15 @@
-import { useContext } from "react"
-import { UserContext } from "../App"
-
+import { useContext } from "react";
+import { UserContext } from "../App";
 export default function Nav() {
-  const {userState, setUserState} = useContext(UserContext)
-    return (
+  const { userState, setUserState } = useContext(UserContext);
 
-      <header>
-        <ul>
-          <li><a href="/" rel="noopener noreferrer">Tale Together</a></li>
-          <li><a href="/" rel="noopener noreferrer">All Stories</a></li>
-          <li><a href="/about" rel="noopener noreferrer">About</a></li>
-          <li><a href="/login" rel="noopener noreferrer">Login</a></li>
-          <li><a href="/signup" rel="noopener noreferrer">Sign up</a></li>
-        </ul>
-      </header>
-    )
-  }
+  return (
+    <header>
+      <ul>
+        <li><a href="/" rel="noopener noreferrer">
+          <img src="/logo-tt.png" alt="Tale Together" style={{ height: '100px' }} />
+        </a></li>
+      </ul>
+    </header>
+  );
+}

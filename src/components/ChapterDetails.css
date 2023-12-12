@@ -1,10 +1,11 @@
 /* ChapterDetails.css */
 
 .chapterContainer {
-    max-width: 800px; 
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #f8f8f8; 
+    background-color: #f8f8f8;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 8px;
   }
@@ -13,7 +14,7 @@
     font-size: 1.8em;
     color: #333;
     margin-bottom: 10px;
-    text-align: center; 
+    text-align: center;
   }
   
   .chapterDescription {
@@ -25,9 +26,9 @@
   
   .chapterContent {
     color: #333;
-    line-height: 1.6; 
-    margin-bottom: 30px; 
-    text-align: justify; 
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
     padding: 0 20px;
   }
   
@@ -36,5 +37,13 @@
     font-size: 2em;
     color: #444;
     margin-bottom: 20px;
+  }
+  
+  .chapterImg {
+    display: block; 
+    max-width: 100%; 
+    height: auto; 
+    margin: 0 auto 20px; 
+    border-radius: 4px; 
   }
   

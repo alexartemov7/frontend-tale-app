@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './StoryList.css';
+import '../App.css';
 
 const StoryList = () => {
   const [stories, setStories] = useState([]);
@@ -12,7 +12,7 @@ const StoryList = () => {
   useEffect(() => {
     const fetchStories = async () => {
       try {
-        let url = 'http://localhost:8080/stories';
+        let url = `${process.env.REACT_APP_API_ENDPOINT}/stories`;
         if (selectedGenre !== 'all') {
           url += `/genre/${selectedGenre}`;
         }

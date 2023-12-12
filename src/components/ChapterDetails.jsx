@@ -9,6 +9,7 @@ const ChapterDetails = ({ chapters }) => {
       <h1 className="containerHeading">Chapters</h1>
       {chapters.map((chapter, index) => (
         <div key={index}>
+          <img src={chapter.illustration} alt={chapter.title} className="chapterImg"/>
           <h2 className="chapterTitle">{chapter.title}</h2>
           <p className="chapterDescription">{chapter.description}</p>
           <div className="chapterContent">{chapter.content}</div>
